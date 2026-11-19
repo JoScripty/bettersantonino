@@ -61,8 +61,6 @@ export const mainNavigation: NavigationItem[] = [
       href: `/transparency/${section.slug}`,
     })),
   },
-  { label: 'News', href: '/news' },
-  { label: 'Hotlines', href: '/hotlines' },
 ];
 
 const socialLinks = [
@@ -89,7 +87,7 @@ export const footerNavigation = {
       links: [
         { label: 'Executive', href: '/government/departments/executive' },
         { label: 'Sangguniang Bayan', href: '/government/departments' },
-        { label: 'Latest News', href: '/news' },
+        { label: 'About', href: '/about' },
         { label: 'Transparency', href: '/transparency' },
         { label: 'Emergency Hotlines', href: '/hotlines' },
       ],

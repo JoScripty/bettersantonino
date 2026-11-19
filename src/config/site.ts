@@ -22,7 +22,7 @@ export const site = {
   region: env.VITE_REGION || 'Region II – Cagayan Valley',
   tagline:
     env.VITE_SITE_TAGLINE ||
-    'A community-run guide to the services, news, and public records of Santo Niño, Cagayan.',
+    'A community-run guide to the services and public records of Santo Niño, Cagayan.',
   disclaimer:
     'BetterSantoNiño.org is an independent community project. It is not the official website of the Municipality of Santo Niño and is not affiliated with the municipal government.',
   /** Contact details of the organization (TODO: fill in) */

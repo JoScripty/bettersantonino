@@ -23,7 +23,7 @@ export default function SEO({
   const defaultTitle = `${siteName} - Community portal for ${site.shortName}, ${site.province}`;
   const defaultDescription =
     import.meta.env.VITE_SITE_DESCRIPTION ||
-    `${siteName} is an independent community guide to the services, news, and public records of ${lguFullName}. Not an official government website.`;
+    `${siteName} is an independent community guide to the services and public records of ${lguFullName}. Not an official government website.`;
   const defaultKeywords =
     import.meta.env.VITE_SITE_KEYWORDS ||
     'government, local government, services, public services, civic services';

@@ -1,11 +1,11 @@
 /**
  * Client-side search over everything bundled with the site: service and
- * government pages, news, transparency records, hotlines. Used when
- * Meilisearch is not configured, and for instant suggestions in the hero.
+ * government pages, transparency records, hotlines, and the About page.
+ * Used when Meilisearch is not configured, and for instant suggestions in
+ * the hero.
  */
 import { getAllPageEntries } from '../data/yamlLoader';
 import { transparencySections } from '../data/navigation';
-import { newsPosts } from './newsLoader';
 import { charterOffices, measures } from './transparencyLoader';
 
 export interface LocalSearchResult {
@@ -17,12 +17,6 @@ export interface LocalSearchResult {
 
 const entries: LocalSearchResult[] = [
   ...getAllPageEntries(),
-  ...newsPosts.map(post => ({
-    title: post.title,
-    description: post.summary,
-    href: `/news/${post.slug}`,
-    section: 'News',
-  })),
   ...transparencySections.map(s => ({
     title: s.label,
     description: s.description,
@@ -49,6 +43,13 @@ const entries: LocalSearchResult[] = [
       'Police, fire, ambulance, MDRRMO, and municipal office numbers.',
     href: '/hotlines',
     section: 'Hotlines',
+  },
+  {
+    title: 'About',
+    description:
+      'About this community portal and the Municipality of Santo Niño, Cagayan.',
+    href: '/about',
+    section: 'About',
   },
 ];
 

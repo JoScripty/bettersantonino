@@ -7,8 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-          'Inter',
-          'Figtree',
+          'Plus Jakarta Sans',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',

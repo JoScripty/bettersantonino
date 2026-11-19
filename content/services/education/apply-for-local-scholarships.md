@@ -26,7 +26,7 @@ The municipality supports deserving and financially needy students through its s
 
 ## How to apply
 
-1. Watch for the call for applications on the municipal Facebook page and in [News & Updates](/news).
+1. Watch for the call for applications on the municipal Facebook page.
 2. Get the application form from the Office of the Mayor (TODO: confirm office).
 3. Submit the form and requirements before the deadline.
 4. Attend the screening or interview if shortlisted.

@@ -12,7 +12,7 @@
  */
 
 import { Meilisearch } from 'meilisearch';
-import { readFileSync, readdirSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import * as yaml from 'js-yaml';
@@ -90,34 +90,6 @@ function loadMarkdownPages(dir, categorySlug, categoryName, type) {
   return documents;
 }
 
-function loadNewsPosts() {
-  const dir = join(ROOT, 'content/news');
-  let files = [];
-  try {
-    files = readdirSync(dir).filter(f => f.endsWith('.md'));
-  } catch {
-    return [];
-  }
-  return files.map(file => {
-    const raw = readFileSync(join(dir, file), 'utf8');
-    const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
-    const fm = (match && yaml.load(match[1])) || {};
-    const body = match ? match[2] : raw;
-    const slug = file.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
-    return {
-      id: `news-${slug}`,
-      title: fm.title ?? extractTitle(body) ?? slug,
-      description: fm.summary ?? '',
-      content: stripMarkdown(body),
-      type: 'news',
-      category: 'News & Updates',
-      categorySlug: 'news',
-      slug,
-      url: `/news/${slug}`,
-    };
-  });
-}
-
 async function indexContent() {
   const documents = [];
 
@@ -154,9 +126,6 @@ async function indexContent() {
       }
     }
   }
-
-  // Index news posts (content/news/YYYY-MM-DD-slug.md with frontmatter)
-  documents.push(...loadNewsPosts());
 
   if (documents.length === 0) {
     console.warn('No documents found to index. Check content/ directory.');

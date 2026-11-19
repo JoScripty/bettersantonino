@@ -16,7 +16,7 @@ Stay informed about typhoons, floods, and suspension of classes and work.
 
 ## How to apply
 
-1. Follow advisories in [News & Updates](/news) and on the municipal Facebook page.
+1. Follow advisories on the municipal Facebook page and local radio.
 2. Monitor PAGASA tropical cyclone wind signals and rainfall warnings.
 3. Keep your phone on for NDRRMC emergency cell broadcast alerts.
 4. Listen to local radio and your barangay warning system (bells, sirens).

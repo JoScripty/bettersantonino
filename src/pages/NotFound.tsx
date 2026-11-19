@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import { Home, LayoutGrid, Newspaper, Phone } from 'lucide-react';
+import { Home, Info, LayoutGrid, Phone } from 'lucide-react';
 import Section from '../components/ui/Section';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
@@ -9,7 +9,7 @@ import SEO from '../components/SEO';
 const links = [
   { to: '/', label: 'Home', icon: Home },
   { to: '/services', label: 'Services', icon: LayoutGrid },
-  { to: '/news', label: 'News & Updates', icon: Newspaper },
+  { to: '/about', label: 'About', icon: Info },
   { to: '/hotlines', label: 'Hotlines', icon: Phone },
 ];
 

@@ -24,7 +24,7 @@ Local entrepreneurs, MSMEs, and farmers can showcase their products during the t
 
 ## How to apply
 
-1. Watch for calls for exhibitors on the municipal Facebook page and in [News & Updates](/news).
+1. Watch for calls for exhibitors on the municipal Facebook page.
 2. Coordinate with the municipal tourism or business development office and DTI Cagayan.
 3. Submit your application before the deadline.
 4. Attend the exhibitors' orientation.

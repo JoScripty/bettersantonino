@@ -9,8 +9,7 @@ import Document from './pages/Document';
 import Government from './pages/Government';
 import Search from './pages/Search';
 import NotFound from './pages/NotFound';
-import News from './pages/News';
-import NewsArticle from './pages/NewsArticle';
+import About from './pages/About';
 import Transparency from './pages/Transparency';
 import Hotlines from './pages/Hotlines';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
@@ -45,8 +44,7 @@ function App() {
                   element={<Document categoryType="government" />}
                 />
                 <Route path="/search" element={<Search />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/news/:slug" element={<NewsArticle />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/transparency" element={<Transparency />} />
                 <Route
                   path="/transparency/:section"

@@ -2,7 +2,7 @@
 
 The Sangguniang Bayan and municipal offices hold public hearings and consultations before adopting major ordinances, the annual budget, and projects that affect communities. Everyone is welcome to attend and speak.
 
-> **TODO:** Keep the table below current. Announce each consultation in [News & Updates](/news) at least one week ahead.
+> **TODO:** Keep the table below current. Announce each consultation on the municipal Facebook page at least one week ahead.
 
 ## Upcoming consultations
 

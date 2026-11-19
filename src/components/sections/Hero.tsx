@@ -1,14 +1,7 @@
 import { useId, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import {
-  FileCheck2,
-  LayoutGrid,
-  Newspaper,
-  Phone,
-  Search,
-  type LucideIcon,
-} from 'lucide-react';
+import { Search } from 'lucide-react';
 import { site } from '../../config/site';
 import { localSearch } from '../../lib/localSearch';
 
@@ -32,38 +25,6 @@ const popular = [
   { label: "Citizen's Charter", to: '/transparency/citizens-charter' },
 ];
 
-const quickLinks: {
-  to: string;
-  label: string;
-  hint: string;
-  icon: LucideIcon;
-}[] = [
-  {
-    to: '/services',
-    label: 'Services',
-    hint: 'Permits, health, aid',
-    icon: LayoutGrid,
-  },
-  {
-    to: '/news',
-    label: 'News & Advisories',
-    hint: 'Latest updates',
-    icon: Newspaper,
-  },
-  {
-    to: '/transparency',
-    label: 'Transparency',
-    hint: 'Budget, bids, ordinances',
-    icon: FileCheck2,
-  },
-  {
-    to: '/hotlines',
-    label: 'Hotlines',
-    hint: 'Emergency numbers',
-    icon: Phone,
-  },
-];
-
 export default function Hero() {
   const { t } = useTranslation('common');
   const navigate = useNavigate();
@@ -81,19 +42,9 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white">
-      {/* Decorative shapes */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-white/5"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-accent-400/10"
-      />
-
+    <div className="relative bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white">
       <div className="container relative mx-auto px-4 py-12 md:py-20">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
           <div className="min-w-0 animate-fade-in">
             <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-white/80">
               {t('hero.welcome')}
@@ -101,13 +52,18 @@ export default function Hero() {
             <h1 className="mb-4 break-words text-4xl font-bold leading-tight md:text-5xl">
               {site.name}
             </h1>
-            <p className="mb-8 max-w-xl text-white/90">{t('hero.subtitle')}</p>
+            <p className="max-w-xl text-white/90">{t('hero.subtitle')}</p>
+          </div>
 
-            <form role="search" onSubmit={submit} className="relative max-w-xl">
+          <div className="min-w-0 rounded-2xl bg-white/10 p-5 ring-1 ring-white/20 backdrop-blur sm:p-6">
+            <h2 className="mb-4 text-lg font-semibold">
+              {t('hero.cardTitle', 'Find a service')}
+            </h2>
+            <form role="search" onSubmit={submit} className="relative">
               <label htmlFor="hero-search" className="sr-only">
                 Search the website
               </label>
-              <div className="flex rounded-full bg-white p-1.5 shadow-lg">
+              <div className="flex rounded-lg bg-white p-1.5">
                 <Search
                   className="ml-3 h-5 w-5 shrink-0 self-center text-gray-400"
                   aria-hidden="true"
@@ -127,7 +83,7 @@ export default function Hero() {
                 />
                 <button
                   type="submit"
-                  className="rounded-full bg-primary-600 px-5 py-2 font-semibold text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  className="rounded-md bg-primary-600 px-5 py-2 font-semibold text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-300"
                 >
                   {t('hero.searchButton')}
                 </button>
@@ -135,7 +91,7 @@ export default function Hero() {
               {showSuggestions && (
                 <ul
                   id={listId}
-                  className="absolute left-0 right-0 top-full z-20 mt-2 overflow-hidden rounded-xl bg-white text-left shadow-xl ring-1 ring-black/5"
+                  className="absolute left-0 right-0 top-full z-20 mt-2 overflow-hidden rounded-lg bg-white text-left shadow-xl ring-1 ring-black/5"
                 >
                   {suggestions.map(s => (
                     <li key={s.href + s.title}>
@@ -162,30 +118,13 @@ export default function Hero() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  className="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/20 transition hover:bg-white/20"
+                  className="rounded-md bg-white/10 px-3 py-1 ring-1 ring-white/20 transition hover:bg-white/20"
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
           </div>
-
-          <nav
-            aria-label="Quick access"
-            className="grid grid-cols-2 gap-3 sm:gap-4"
-          >
-            {quickLinks.map(({ to, label, hint, icon: Icon }) => (
-              <Link
-                key={to}
-                to={to}
-                className="group rounded-2xl bg-white/10 p-4 ring-1 ring-white/15 backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20 sm:p-5"
-              >
-                <Icon className="mb-3 h-7 w-7" aria-hidden="true" />
-                <span className="block font-semibold">{label}</span>
-                <span className="text-sm text-white/75">{hint}</span>
-              </Link>
-            ))}
-          </nav>
         </div>
       </div>
     </div>

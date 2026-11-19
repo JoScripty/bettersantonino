@@ -7,7 +7,8 @@
   },
   "hero": {
     "welcome": "Welcome to",
-    "subtitle": "A community-run guide to the services, news, and public records of the Municipality of Santo Niño, Cagayan.",
+    "subtitle": "A community-run guide to the services and public records of the Municipality of Santo Niño, Cagayan.",
+    "cardTitle": "Find a service",
     "searchPlaceholder": "What do you need? e.g. business permit, birth certificate",
     "searchButton": "Search",
     "popular": "Popular:"
@@ -22,14 +23,6 @@
   "governmentActivity": {
     "title": "Your Government",
     "description": "Get to know your officials, municipal offices, plans, and how to take part."
-  },
-  "news": {
-    "title": "Latest News & Updates",
-    "description": "Announcements, advisories, and stories from the municipal government.",
-    "viewAll": "View all news",
-    "readMore": "Read more",
-    "all": "All",
-    "empty": "No posts found."
   },
   "transparency": {
     "title": "Transparency",
@@ -49,12 +42,14 @@
     "rights": "All content is in the public domain unless otherwise stated."
   },
   "navbar": {
-    "home": "Home",
     "services": "Services",
     "government": "Government",
     "transparency": "Transparency",
-    "news": "News",
-    "hotlines": "Hotlines",
-    "search": "Search"
+    "aboutus": "About Us",
+    "hotlines": "Hotlines"
+  },
+  "about": {
+    "title": "About",
+    "description": "About this community portal and the Municipality of Santo Niño, Cagayan."
   }
 }

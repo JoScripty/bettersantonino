@@ -27,16 +27,16 @@ This is a React 19 + TypeScript + Vite app: **BetterSantoNiño.org**, an indepen
 
 ### Routing (`src/App.tsx`)
 
-- `/` — Home (advisory banner, hero with search, services, news, transparency, Mayor's message, government, hotlines)
+- `/` — Home (hero with search card, services, transparency, Mayor's message, government, hotlines)
 - `/services`, `/services/:category`, `/services/:category/:documentSlug` — Services
 - `/government`, `/government/:category`, `/government/:category/:documentSlug` — Government
-- `/news`, `/news/:slug` — News & Updates
 - `/transparency`, `/transparency/:section` — Transparency hub (`full-disclosure`, `bids`, `ordinances`, `citizens-charter`)
 - `/hotlines` — Emergency and office hotlines
+- `/about` — About this website and about the municipality (`src/pages/About.tsx`)
 - `/search` — Meilisearch when `VITE_MEILISEARCH_HOST` is set, otherwise client-side search (`src/lib/localSearch.ts`)
 - `*` — 404 (`src/pages/NotFound.tsx`); `Document` also renders it when a page is missing
 
-Menus are built in `src/data/navigation.ts`, which also defines `transparencySections`.
+Menus are built in `src/data/navigation.ts`, which also defines `transparencySections`. The navbar centers the `mainNavigation` dropdowns (Services, Government, Transparency) and puts About and a red Hotlines button on the right (`src/components/layout/Navbar.tsx`). The site does not publish news.
 
 ### Content System
 
@@ -58,10 +58,6 @@ Markdown files are loaded dynamically via `import()` in `src/lib/markdownLoader.
 
 A markdown page can have a companion JSON file with the same slug (e.g. `executive.md` + `executive.json`). `interpolate()` replaces `{PLACEHOLDER}` tokens: JSON value → `VITE_<KEY>` env var → unchanged token. `executive.json` also feeds the Mayor's message on the home page (`MAYOR`, `HONORIFIC_TITLE`, optional `MAYOR_PHOTO`).
 
-#### News (`content/news/`)
-
-One markdown file per post, named `YYYY-MM-DD-slug.md`, with YAML frontmatter: `title`, `date`, `category` (news | announcement | advisory | event), `summary`, optional `cover` and `pinned`. `src/lib/newsLoader.ts` loads them eagerly with `import.meta.glob`, so adding a post needs no code change. The newest `pinned: true` post shows as the home-page banner.
-
 #### Transparency (`content/transparency/`)
 
 `full-disclosure.yaml`, `bids.yaml`, `ordinances.yaml`, and `citizens-charter.yaml` are loaded by `src/lib/transparencyLoader.ts`. PDFs go in `public/documents/transparency/` and are referenced by each record's `file` field. Lists render through `src/components/transparency/RecordTable.tsx` (search and URL-backed filters; a table on desktop, cards on mobile).
@@ -72,7 +68,7 @@ One markdown file per post, named `YYYY-MM-DD-slug.md`, with YAML frontmatter: `
 
 ### Search
 
-`scripts/index-content.mjs` indexes services, government pages, and news into Meilisearch. Without Meilisearch, `/search` and the hero suggestions use `src/lib/localSearch.ts`, which indexes pages, news, transparency records, and hotlines in the browser (accent-insensitive, so "nino" matches "Niño").
+`scripts/index-content.mjs` indexes services and government pages into Meilisearch. Without Meilisearch, `/search` and the hero suggestions use `src/lib/localSearch.ts`, which indexes pages, transparency records, hotlines, and the About page in the browser (accent-insensitive, so "nino" matches "Niño").
 
 ### Internationalization
 

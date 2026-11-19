@@ -21,7 +21,7 @@ Volunteer for river clean-ups, coastal and roadside clean-ups, and tree planting
 
 ## How to apply
 
-1. Watch for announcements in [News & Updates](/news) and on the municipal Facebook page.
+1. Watch for announcements on the municipal Facebook page.
 2. Register your group with MENRO.
 3. Bring water, a hat, gloves, and a reusable bag on the activity day.
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Menu, ChevronDown, Search, Landmark, Phone } from 'lucide-react';
+import { X, Menu, ChevronDown, Landmark, Phone } from 'lucide-react';
 import { Link, NavLink, useLocation } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { mainNavigation, navKey } from '../../data/navigation';
@@ -7,6 +7,7 @@ import type { LanguageType } from '../../types/index';
 import { AVAILABLE_LANGUAGES, LANGUAGES } from '../../i18n/languages';
 import { site } from '../../config/site';
 import { cn } from '../../lib/utils';
+import TopBarStatus from './TopBarStatus';
 
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation('common');
@@ -40,20 +41,15 @@ const Navbar: React.FC = () => {
   );
 
   return (
-    <nav className="bg-white/95 backdrop-blur shadow-sm sticky top-0 z-50">
+    <nav className="bg-white shadow-sm sticky top-0 z-50">
       {/* Top bar */}
-      <div className="bg-primary-700 text-white">
-        <div className="container mx-auto px-4 flex justify-between items-center h-9 text-xs">
-          <span className="truncate">
-            {t(
-              'topbar.notice',
-              'Independent community portal · Not an official government website'
-            )}
-          </span>
+      <div className="bg-slate-50 border-b border-slate-200 text-slate-600">
+        <div className="container mx-auto px-4 flex justify-end items-center gap-4 h-8 text-[10px]">
           <div className="flex items-center gap-4 shrink-0">
+            <TopBarStatus />
             <Link
               to="/hotlines"
-              className="inline-flex items-center gap-1 font-semibold hover:underline"
+              className="inline-flex items-center gap-1 font-semibold text-red-600 hover:underline"
             >
               <Phone className="h-3 w-3" aria-hidden="true" />
               {t('topbar.emergency', 'Emergency: 911')}
@@ -65,8 +61,11 @@ const Navbar: React.FC = () => {
 
       {/* Main navigation */}
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-3 gap-4">
-          <Link to="/" className="flex items-center gap-3 min-w-0">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center py-3 gap-4">
+          <Link
+            to="/"
+            className="flex items-center gap-3 min-w-0 w-fit max-w-full"
+          >
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-600 text-white">
               {/* TODO: replace with the BetterSantoNiño.org logo. Do not use the
                   official municipal seal: this is not a government website. */}
@@ -77,34 +76,20 @@ const Navbar: React.FC = () => {
                 {site.name}
               </span>
               <span className="block text-xs text-gray-600 truncate">
-                Community portal for {site.shortName}, {site.province}
+                Province of {site.province}
               </span>
             </span>
           </Link>
 
-          {/* Desktop navigation */}
-          <div className="hidden lg:flex items-center gap-1">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                cn(
-                  'px-3 py-2 rounded-md font-medium transition-colors',
-                  isActive
-                    ? 'text-primary-700 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600'
-                )
-              }
-            >
-              {label('Home')}
-            </NavLink>
+          {/* Desktop navigation (centered) */}
+          <div className="hidden lg:flex items-center justify-center gap-1">
             {mainNavigation.map(item => (
               <div key={item.label} className="relative group">
                 <NavLink
                   to={item.href}
                   className={({ isActive }) =>
                     cn(
-                      'flex items-center px-3 py-2 rounded-md font-medium transition-colors',
+                      'flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors',
                       isActive
                         ? 'text-primary-700 bg-primary-50'
                         : 'text-gray-700 hover:text-primary-600'
@@ -140,14 +125,34 @@ const Navbar: React.FC = () => {
                 )}
               </div>
             ))}
+          </div>
 
-            <Link
-              to="/search"
-              aria-label="Search"
-              className="ml-2 p-2 rounded-full text-gray-700 hover:bg-gray-100 hover:text-primary-600"
+          {/* Desktop navigation (right) */}
+          <div className="hidden lg:flex items-center justify-end gap-2">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                cn(
+                  'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                  isActive
+                    ? 'text-primary-700 bg-primary-50'
+                    : 'text-gray-700 hover:text-primary-600'
+                )
+              }
             >
-              <Search className="h-5 w-5" />
-            </Link>
+              {label('About Us')}
+            </NavLink>
+            <NavLink
+              to="/hotlines"
+              className={({ isActive }) =>
+                cn(
+                  'px-4 py-2 rounded-md text-sm font-semibold text-white transition-colors hover:bg-error-700',
+                  isActive ? 'bg-error-700' : 'bg-error-600'
+                )
+              }
+            >
+              {label('Hotlines')}
+            </NavLink>
           </div>
 
           {/* Mobile menu button */}
@@ -155,7 +160,7 @@ const Navbar: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
-            className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="lg:hidden justify-self-end inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
           >
             <span className="sr-only">
               {isOpen ? 'Close main menu' : 'Open main menu'}
@@ -178,12 +183,6 @@ const Navbar: React.FC = () => {
         )}
       >
         <div className="container mx-auto px-2 pt-2 pb-4 space-y-1 border-t border-gray-200 bg-white">
-          <Link
-            to="/"
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
-          >
-            {label('Home')}
-          </Link>
           {mainNavigation.map(item =>
             item.children ? (
               <div key={item.label}>
@@ -233,11 +232,19 @@ const Navbar: React.FC = () => {
           )}
 
           <Link
-            to="/search"
+            to="/about"
             className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
           >
-            {label('Search')}
+            {label('About Us')}
           </Link>
+          <div className="px-2 pt-2">
+            <Link
+              to="/hotlines"
+              className="block rounded-md bg-error-600 px-4 py-2 text-center text-base font-semibold text-white hover:bg-error-700"
+            >
+              {label('Hotlines')}
+            </Link>
+          </div>
           {languageSelect && (
             <div className="px-4 py-3 border-t border-gray-200">
               {languageSelect}

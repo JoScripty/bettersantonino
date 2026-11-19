@@ -85,7 +85,7 @@ export default function Search() {
               type="search"
               value={query}
               onChange={e => setQuery(e.target.value || null)}
-              placeholder="Search services, offices, news, documents…"
+              placeholder="Search services, offices, documents…"
               aria-label="Search the website"
               className="w-full rounded-lg border border-gray-300 py-3 pl-10 pr-4 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
               autoFocus
@@ -141,7 +141,7 @@ export default function Search() {
 
           {!trimmed && (
             <p className="py-12 text-center text-sm text-gray-500">
-              Type to search across services, government offices, news, and
+              Type to search across services, government offices, and
               transparency documents.
             </p>
           )}

@@ -1,7 +1,5 @@
 import Hero from '../components/sections/Hero';
-import AdvisoryBanner from '../components/home/AdvisoryBanner';
 import ServicesSection from '../components/home/ServicesSection';
-import LatestNewsSection from '../components/home/LatestNewsSection';
 import TransparencySection from '../components/home/TransparencySection';
 import MayorWelcome from '../components/home/MayorWelcome';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
@@ -14,12 +12,10 @@ const Home: React.FC = () => {
     <>
       <SEO
         description={`${site.tagline} Not an official government website.`}
-        keywords="Santo Niño, Cagayan, LGU, municipal government, services, news, transparency"
+        keywords="Santo Niño, Cagayan, LGU, municipal government, services, transparency"
       />
-      <AdvisoryBanner />
       <Hero />
       <ServicesSection />
-      <LatestNewsSection />
       <TransparencySection />
       <MayorWelcome />
       <GovernmentActivitySection />

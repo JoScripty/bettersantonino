@@ -10,4 +10,4 @@ Key programs of the current administration. Each entry should state the goal, th
 | [Program name] | [Goal] | [Office] | Planned   |
 | [Program name] | [Goal] | [Office] | Completed |
 
-Updates on these programs are posted in [News & Updates](/news).
+Updates on these programs are posted on the municipal Facebook page.
