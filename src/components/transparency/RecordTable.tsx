@@ -22,7 +22,10 @@ interface RecordTableProps<T> {
   filters?: Filter<T>[];
   rowKey: (row: T) => string;
   file?: (row: T) => string | undefined;
-  /** Card heading on small screens. */
+  /**
+   * Card heading on small screens. The first column is treated as the title
+   * column and is not repeated inside the card.
+   */
   title: (row: T) => ReactNode;
   emptyText?: string;
 }
@@ -172,7 +175,8 @@ export default function RecordTable<T>({
                   {title(row)}
                 </div>
                 <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
-                  {columns.map(col => (
+                  {/* The first column is the record title, already shown above */}
+                  {columns.slice(1).map(col => (
                     <div key={col.label} className="contents">
                       <dt className="text-gray-500">{col.label}</dt>
                       <dd className="text-gray-800">{col.render(row)}</dd>

@@ -49,7 +49,7 @@ export default function SEO({
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
+      {fullUrl && <meta property="og:url" content={fullUrl} />}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={fullImage} />
@@ -58,7 +58,7 @@ export default function SEO({
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={fullUrl} />
+      {fullUrl && <meta property="twitter:url" content={fullUrl} />}
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={fullDescription} />
       <meta property="twitter:image" content={fullImage} />
@@ -71,28 +71,11 @@ export default function SEO({
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="theme-color" content="#0052bc" />
 
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
+      {/* Canonical URL (only when VITE_WEBSITE_URL or `url` is set) */}
+      {fullUrl && <link rel="canonical" href={fullUrl} />}
 
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
+      {/* Favicon. TODO: replace public/favicon.svg with the municipal seal */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />

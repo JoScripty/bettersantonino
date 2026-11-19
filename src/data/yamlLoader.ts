@@ -129,3 +129,40 @@ export async function getCategorySubcategories(
 export function isNestedCategory(slug: string): boolean {
   return slug in categoryIndexMap;
 }
+
+export interface PageEntry {
+  title: string;
+  description?: string;
+  href: string;
+  section: string;
+}
+
+/** Every service and government page, read synchronously (used by search). */
+export function getAllPageEntries(): PageEntry[] {
+  const entries: PageEntry[] = [];
+  const add = (data: CategoryData, base: 'services' | 'government') => {
+    for (const cat of data.categories) {
+      entries.push({
+        title: cat.category,
+        description: cat.description,
+        href: `/${base}/${cat.slug}`,
+        section: base === 'services' ? 'Services' : 'Government',
+      });
+      const raw = categoryIndexMap[cat.slug];
+      if (!raw) continue;
+      const index = yaml.load(raw) as CategoryIndexData | undefined;
+      for (const page of index?.pages ?? []) {
+        if (!page.slug) continue;
+        entries.push({
+          title: page.name,
+          description: page.description,
+          href: `/${base}/${cat.slug}/${page.slug}`,
+          section: cat.category,
+        });
+      }
+    }
+  };
+  add(serviceCategories, 'services');
+  add(governmentCategories, 'government');
+  return entries;
+}

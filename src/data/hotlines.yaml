@@ -1,0 +1,77 @@
+# Emergency and public service hotlines
+# TODO: replace every [placeholder] number with the official number and verify
+# it by calling before publishing. Numbers marked national are nationwide.
+#
+# Fields: name, description, numbers (list), icon (Lucide icon name), emergency (true = shown on home page)
+groups:
+  - title: 'Emergency'
+    hotlines:
+      - name: 'National Emergency Hotline'
+        description: 'Police, fire, and medical emergencies nationwide'
+        numbers: ['911']
+        icon: 'Siren'
+        emergency: true
+      - name: 'MDRRMO Santo Niño'
+        description: 'Rescue, disaster response, and ambulance'
+        numbers: ['[0900-000-0000]']
+        icon: 'LifeBuoy'
+        emergency: true
+      - name: 'PNP Santo Niño Municipal Police Station'
+        description: 'Crime reports and police assistance'
+        numbers: ['[0900-000-0000]']
+        icon: 'Shield'
+        emergency: true
+      - name: 'BFP Santo Niño Fire Station'
+        description: 'Fire and rescue'
+        numbers: ['[0900-000-0000]']
+        icon: 'Flame'
+        emergency: true
+      - name: 'Rural Health Unit'
+        description: 'Medical consultation and referral'
+        numbers: ['[0900-000-0000]']
+        icon: 'HeartPulse'
+        emergency: false
+      - name: 'Philippine Red Cross'
+        description: 'Blood services and emergency assistance'
+        numbers: ['143']
+        icon: 'Cross'
+        emergency: false
+  - title: 'Municipal offices'
+    hotlines:
+      - name: 'Office of the Mayor'
+        description: 'Municipal Hall, Poblacion'
+        numbers: ['[0900-000-0000]']
+        icon: 'Landmark'
+        emergency: false
+      - name: 'MSWDO'
+        description: 'Social welfare and crisis assistance'
+        numbers: ['[0900-000-0000]']
+        icon: 'HandHeart'
+        emergency: false
+      - name: 'Municipal Agriculture Office'
+        description: 'Farmers and fisherfolk assistance'
+        numbers: ['[0900-000-0000]']
+        icon: 'Wheat'
+        emergency: false
+      - name: 'Municipal Engineering Office'
+        description: 'Roads, bridges, and public works'
+        numbers: ['[0900-000-0000]']
+        icon: 'HardHat'
+        emergency: false
+  - title: 'Utilities and national services'
+    hotlines:
+      - name: 'Electric cooperative'
+        description: 'Power interruptions (TODO: confirm the electric cooperative serving Santo Niño)'
+        numbers: ['[0900-000-0000]']
+        icon: 'Zap'
+        emergency: false
+      - name: '8888 Citizens’ Complaint Hotline'
+        description: 'Complaints about government services'
+        numbers: ['8888']
+        icon: 'MessageSquareWarning'
+        emergency: false
+      - name: 'Contact Center ng Bayan'
+        description: 'Government information and feedback'
+        numbers: ['1-6565', '0908-881-6565']
+        icon: 'Headset'
+        emergency: false

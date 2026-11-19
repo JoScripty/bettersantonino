@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { mainNavigation, navKey } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
 import { AVAILABLE_LANGUAGES, LANGUAGES } from '../../i18n/languages';
-import { isMeilisearchEnabled } from '../../lib/meilisearch';
 import { site } from '../../config/site';
 import { cn } from '../../lib/utils';
 
@@ -145,15 +144,14 @@ const Navbar: React.FC = () => {
                 )}
               </div>
             ))}
-            {isMeilisearchEnabled && (
-              <Link
-                to="/search"
-                aria-label="Search"
-                className="ml-2 p-2 rounded-full text-gray-700 hover:bg-gray-100 hover:text-primary-600"
-              >
-                <Search className="h-5 w-5" />
-              </Link>
-            )}
+
+            <Link
+              to="/search"
+              aria-label="Search"
+              className="ml-2 p-2 rounded-full text-gray-700 hover:bg-gray-100 hover:text-primary-600"
+            >
+              <Search className="h-5 w-5" />
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -237,14 +235,13 @@ const Navbar: React.FC = () => {
               </Link>
             )
           )}
-          {isMeilisearchEnabled && (
-            <Link
-              to="/search"
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
-            >
-              {label('Search')}
-            </Link>
-          )}
+
+          <Link
+            to="/search"
+            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
+          >
+            {label('Search')}
+          </Link>
           {languageSelect && (
             <div className="px-4 py-3 border-t border-gray-200">
               {languageSelect}

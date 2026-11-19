@@ -136,7 +136,8 @@ export default function Document({
     return (
       <>
         <SEO
-          title={documentSlug}
+          title={nestedIndex.title ?? documentSlug}
+          description={nestedIndex.description}
           keywords={`${documentSlug}, government services, local government`}
         />
         <Section className="p-3 mb-12">
