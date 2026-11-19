@@ -15,7 +15,7 @@ The Municipal Disaster Risk Reduction and Management Office (MDRRMO) reminds all
 - Prepare a **go-bag** with water, food for 3 days, a flashlight, a power bank, medicines, and copies of IDs.
 - Know your **evacuation center** and the safest route to it. See [Know Your Evacuation Center and Route](/services/disaster-preparedness/learn-about-emergency-response-procedures-and-evacuation-routes).
 - Secure loose roofing and trim tree branches near your house.
-- Follow official advisories on this website and the municipal Facebook page.
+- Follow official advisories from the MDRRMO and the municipal government's Facebook page. We repost them here.
 
 ## When an evacuation is announced
 

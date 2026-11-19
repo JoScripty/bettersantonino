@@ -50,12 +50,12 @@ const Services: React.FC = () => {
       <>
         <SEO
           title="Services"
-          description={`All services provided by the ${site.name} government. Find what you need for citizenship, business, education, and more.`}
+          description={`Services of the ${site.lguName}: requirements, steps, fees, and where to go. Find what you need for citizenship, business, education, and more.`}
           keywords="government services, public services, local government, civic services"
         />
         <ServicesSection
           title={`All local government services`}
-          description={`All services provided by the ${site.name} government. Find what you need for citizenship, business, education, and more.`}
+          description={`Services of the ${site.lguName}: requirements, steps, fees, and where to go. Find what you need for citizenship, business, education, and more.`}
         />
       </>
     );

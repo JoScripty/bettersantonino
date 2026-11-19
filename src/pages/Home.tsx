@@ -7,13 +7,13 @@ import MayorWelcome from '../components/home/MayorWelcome';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
 import HotlinesStrip from '../components/home/HotlinesStrip';
 import SEO from '../components/SEO';
-import { fullName } from '../config/site';
+import { site } from '../config/site';
 
 const Home: React.FC = () => {
   return (
     <>
       <SEO
-        description={`Official website of the ${fullName}. Find services, the latest news and advisories, transparency reports, and emergency hotlines.`}
+        description={`${site.tagline} Not an official government website.`}
         keywords="Santo Niño, Cagayan, LGU, municipal government, services, news, transparency"
       />
       <AdvisoryBanner />

@@ -50,12 +50,12 @@ const Government: React.FC = () => {
       <>
         <SEO
           title="Government"
-          description={`Officials, offices, plans, and public consultations of the ${site.name}.`}
+          description={`Officials, offices, plans, and public consultations of the ${site.lguName}.`}
           keywords="Santo Niño officials, mayor, Sangguniang Bayan, municipal offices"
         />
         <GovernmentActivitySection
           title="Your Government"
-          description={`Officials, offices, plans, and public consultations of the ${site.name}.`}
+          description={`Officials, offices, plans, and public consultations of the ${site.lguName}.`}
         />
       </>
     );

@@ -98,12 +98,9 @@ export default function Hero() {
             <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-white/80">
               {t('hero.welcome')}
             </p>
-            <h1 className="mb-1 text-4xl font-bold leading-tight md:text-5xl">
+            <h1 className="mb-4 break-words text-4xl font-bold leading-tight md:text-5xl">
               {site.name}
             </h1>
-            <p className="mb-4 text-lg font-medium text-white/85">
-              Province of {site.province}
-            </p>
             <p className="mb-8 max-w-xl text-white/90">{t('hero.subtitle')}</p>
 
             <form role="search" onSubmit={submit} className="relative max-w-xl">

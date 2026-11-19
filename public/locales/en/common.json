@@ -1,13 +1,13 @@
 {
-  "site_name": "Municipality of Santo Niño",
-  "site_description": "Official website of the Municipality of Santo Niño, Cagayan",
+  "site_name": "BetterSantoNiño.org",
+  "site_description": "An independent community portal for Santo Niño, Cagayan",
   "topbar": {
-    "republic": "Republic of the Philippines",
+    "notice": "Independent community portal · Not an official government website",
     "emergency": "Emergency: 911"
   },
   "hero": {
     "welcome": "Welcome to",
-    "subtitle": "Find services, follow the latest updates, and see how your local government works for you.",
+    "subtitle": "A community-run guide to the services, news, and public records of the Municipality of Santo Niño, Cagayan.",
     "searchPlaceholder": "What do you need? e.g. business permit, birth certificate",
     "searchButton": "Search",
     "popular": "Popular:"

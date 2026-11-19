@@ -19,11 +19,11 @@ Pre-commit hook runs `lint-staged` automatically (ESLint + Prettier on staged fi
 
 ## Architecture
 
-This is a React 19 + TypeScript + Vite app: the official website of the **Municipality of Santo Niño, Cagayan** (Region II). It started from the BetterGov LGU starter kit and uses React Router, Tailwind CSS v4, the `@bettergov/kapwa` design system, i18next, nuqs (URL state), and a YAML/Markdown content system. Much of the content is still placeholder: search for `TODO` and `[brackets]` to find values that need official data.
+This is a React 19 + TypeScript + Vite app: **BetterSantoNiño.org**, an independent community portal about the **Municipality of Santo Niño, Cagayan** (Region II). It is **not** the official LGU website: never describe it as official, use gov.ph-style headers or the municipal seal, or put words in officials' mouths. It started from the BetterGov LGU starter kit and uses React Router, Tailwind CSS v4, the `@bettergov/kapwa` design system, i18next, nuqs (URL state), and a YAML/Markdown content system. Much of the content is still placeholder: search for `TODO` and `[brackets]` to find values that need official data.
 
 ### Site configuration
 
-`src/config/site.ts` holds the LGU name, province, address, phone, e-mail, office hours, and social links. Each value reads a `VITE_*` env var (see `env.example`) and falls back to a default, so the site works without an .env file. Use `site` / `fullName` from there instead of reading `import.meta.env` directly.
+`src/config/site.ts` holds the site name (`site.name`, "BetterSantoNiño.org"), the government it covers (`site.lguName`, `lguFullName`), the not-affiliated disclaimer, the organization's e-mail and social links, and the Municipal Hall address, phone, and office hours. Each value reads a `VITE_*` env var (see `env.example`) and falls back to a default, so the site works without an .env file. Use `site` from there instead of reading `import.meta.env` directly. Use `site.name` for the website and `site.lguName` only when referring to the municipal government.
 
 ### Routing (`src/App.tsx`)
 

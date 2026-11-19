@@ -40,25 +40,31 @@ const Footer: React.FC = () => {
               <div>
                 <div className="font-bold">{site.name}</div>
                 <div className="text-xs text-gray-400">
-                  Province of {site.province} · {site.region}
+                  Community portal for {site.shortName}, {site.province}
                 </div>
               </div>
             </div>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li className="flex gap-2">
-                <MapPin className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
-                {site.address}
-              </li>
-              <li className="flex gap-2">
-                <Phone className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
-                <a href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}>
-                  {site.phone}
-                </a>
-              </li>
-              <li className="flex gap-2">
+            <p className="mb-4 text-sm text-gray-300">{site.disclaimer}</p>
+            {site.email && (
+              <p className="mb-4 flex gap-2 text-sm text-gray-300">
                 <Mail className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
                 <a href={`mailto:${site.email}`} className="break-all">
                   {site.email}
+                </a>
+              </p>
+            )}
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-400">
+              {site.lguName} (Municipal Hall)
+            </p>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li className="flex gap-2">
+                <MapPin className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
+                {site.lguAddress}
+              </li>
+              <li className="flex gap-2">
+                <Phone className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
+                <a href={`tel:${site.lguPhone.replace(/[^\d+]/g, '')}`}>
+                  {site.lguPhone}
                 </a>
               </li>
               <li className="flex gap-2">
@@ -116,7 +122,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between gap-2 text-sm text-gray-400">
           <p>
-            © {year} {site.name}, {site.province}.{' '}
+            © {year} {site.name}.{' '}
             {t(
               'footer.rights',
               'All content is in the public domain unless otherwise stated.'

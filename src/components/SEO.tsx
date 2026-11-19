@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { fullName } from '../config/site';
+import { lguFullName, site } from '../config/site';
 
 interface SEOProps {
   title?: string;
@@ -18,12 +18,12 @@ export default function SEO({
   image,
   url,
   type = 'website',
-  siteName = fullName,
+  siteName = site.name,
 }: SEOProps) {
-  const defaultTitle = `${siteName} - Official Government Website`;
+  const defaultTitle = `${siteName} - Community portal for ${site.shortName}, ${site.province}`;
   const defaultDescription =
     import.meta.env.VITE_SITE_DESCRIPTION ||
-    `Official website of ${siteName}. Access government services, information, and resources.`;
+    `${siteName} is an independent community guide to the services, news, and public records of ${lguFullName}. Not an official government website.`;
   const defaultKeywords =
     import.meta.env.VITE_SITE_KEYWORDS ||
     'government, local government, services, public services, civic services';

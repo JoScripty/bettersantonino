@@ -45,17 +45,12 @@ const Navbar: React.FC = () => {
       <div className="bg-primary-700 text-white">
         <div className="container mx-auto px-4 flex justify-between items-center h-9 text-xs">
           <span className="truncate">
-            {t('topbar.republic', 'Republic of the Philippines')}
+            {t(
+              'topbar.notice',
+              'Independent community portal · Not an official government website'
+            )}
           </span>
           <div className="flex items-center gap-4 shrink-0">
-            <a
-              href="https://www.gov.ph"
-              className="hidden sm:inline hover:underline"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GOV.PH
-            </a>
             <Link
               to="/hotlines"
               className="inline-flex items-center gap-1 font-semibold hover:underline"
@@ -73,7 +68,8 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-3 gap-4">
           <Link to="/" className="flex items-center gap-3 min-w-0">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-600 text-white">
-              {/* TODO: replace with the official municipal seal (public/seal.png) */}
+              {/* TODO: replace with the BetterSantoNiño.org logo. Do not use the
+                  official municipal seal: this is not a government website. */}
               <Landmark className="h-6 w-6" aria-hidden="true" />
             </span>
             <span className="min-w-0">
@@ -81,7 +77,7 @@ const Navbar: React.FC = () => {
                 {site.name}
               </span>
               <span className="block text-xs text-gray-600 truncate">
-                Province of {site.province}
+                Community portal for {site.shortName}, {site.province}
               </span>
             </span>
           </Link>
