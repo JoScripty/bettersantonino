@@ -9,6 +9,8 @@ import Document from './pages/Document';
 import Government from './pages/Government';
 import Search from './pages/Search';
 import NotFound from './pages/NotFound';
+import News from './pages/News';
+import NewsArticle from './pages/NewsArticle';
 import { isMeilisearchEnabled } from './lib/meilisearch';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
@@ -37,6 +39,8 @@ function App() {
               {isMeilisearchEnabled && (
                 <Route path="/search" element={<Search />} />
               )}
+              <Route path="/news" element={<News />} />
+              <Route path="/news/:slug" element={<NewsArticle />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

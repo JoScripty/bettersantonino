@@ -12,7 +12,7 @@
  */
 
 import { Meilisearch } from 'meilisearch';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import * as yaml from 'js-yaml';
@@ -90,30 +90,73 @@ function loadMarkdownPages(dir, categorySlug, categoryName, type) {
   return documents;
 }
 
+function loadNewsPosts() {
+  const dir = join(ROOT, 'content/news');
+  let files = [];
+  try {
+    files = readdirSync(dir).filter(f => f.endsWith('.md'));
+  } catch {
+    return [];
+  }
+  return files.map(file => {
+    const raw = readFileSync(join(dir, file), 'utf8');
+    const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+    const fm = (match && yaml.load(match[1])) || {};
+    const body = match ? match[2] : raw;
+    const slug = file.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+    return {
+      id: `news-${slug}`,
+      title: fm.title ?? extractTitle(body) ?? slug,
+      description: fm.summary ?? '',
+      content: stripMarkdown(body),
+      type: 'news',
+      category: 'News & Updates',
+      categorySlug: 'news',
+      slug,
+      url: `/news/${slug}`,
+    };
+  });
+}
+
 async function indexContent() {
   const documents = [];
 
   // Index services
-  const servicesYaml = readFileSync(join(ROOT, 'src/data/services.yaml'), 'utf8');
+  const servicesYaml = readFileSync(
+    join(ROOT, 'src/data/services.yaml'),
+    'utf8'
+  );
   const servicesData = yaml.load(servicesYaml);
   for (const cat of servicesData.categories) {
-    documents.push(...loadMarkdownPages('services', cat.slug, cat.category, 'service'));
+    documents.push(
+      ...loadMarkdownPages('services', cat.slug, cat.category, 'service')
+    );
   }
 
   // Index government
   const govYaml = readFileSync(join(ROOT, 'src/data/government.yaml'), 'utf8');
   const govData = yaml.load(govYaml);
   for (const cat of govData.categories) {
-    documents.push(...loadMarkdownPages('government', cat.slug, cat.category, 'government'));
+    documents.push(
+      ...loadMarkdownPages('government', cat.slug, cat.category, 'government')
+    );
     // Also check nested subcategory indexes registered in yamlLoader
     if (cat.subcategories) {
       for (const sub of cat.subcategories) {
         documents.push(
-          ...loadMarkdownPages('government', `${cat.slug}/${sub.slug}`, sub.name, 'government')
+          ...loadMarkdownPages(
+            'government',
+            `${cat.slug}/${sub.slug}`,
+            sub.name,
+            'government'
+          )
         );
       }
     }
   }
+
+  // Index news posts (content/news/YYYY-MM-DD-slug.md with frontmatter)
+  documents.push(...loadNewsPosts());
 
   if (documents.length === 0) {
     console.warn('No documents found to index. Check content/ directory.');
@@ -126,13 +169,31 @@ async function indexContent() {
   await index.updateSettings({
     searchableAttributes: ['title', 'description', 'content', 'category'],
     filterableAttributes: ['type', 'categorySlug'],
-    displayedAttributes: ['id', 'title', 'description', 'type', 'category', 'categorySlug', 'slug', 'url'],
-    rankingRules: ['words', 'typo', 'proximity', 'attribute', 'sort', 'exactness'],
+    displayedAttributes: [
+      'id',
+      'title',
+      'description',
+      'type',
+      'category',
+      'categorySlug',
+      'slug',
+      'url',
+    ],
+    rankingRules: [
+      'words',
+      'typo',
+      'proximity',
+      'attribute',
+      'sort',
+      'exactness',
+    ],
   });
 
   console.log(`Indexing ${documents.length} documents...`);
   const task = await index.addDocuments(documents, { primaryKey: 'id' });
-  console.log(`Done! Task ID: ${task.taskUid}. ${documents.length} documents queued for indexing.`);
+  console.log(
+    `Done! Task ID: ${task.taskUid}. ${documents.length} documents queued for indexing.`
+  );
 }
 
 indexContent().catch(err => {
