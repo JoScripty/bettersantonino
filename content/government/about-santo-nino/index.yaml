@@ -1,0 +1,11 @@
+layout: grid
+pages:
+  - name: 'History'
+    slug: 'history'
+    description: 'How Santo Niño came to be, from its founding to the present.'
+  - name: 'Municipal Profile'
+    slug: 'municipal-profile'
+    description: 'Location, land area, population, income class, and economy at a glance.'
+  - name: 'Barangays'
+    slug: 'barangays'
+    description: 'The barangays of Santo Niño and their punong barangay.'

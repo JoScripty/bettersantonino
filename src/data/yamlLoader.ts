@@ -44,6 +44,9 @@ import disasterPreparednessIndex from '../../content/services/disaster-preparedn
 import housingLandUseIndex from '../../content/services/housing-land-use/index.yaml?raw';
 import governmentDepartmentsIndex from '../../content/government/departments/index.yaml?raw';
 import governmentDepartmentsLegislativeIndex from '../../content/government/departments/legislative/index.yaml?raw';
+import aboutSantoNinoIndex from '../../content/government/about-santo-nino/index.yaml?raw';
+import plansAndProgramsIndex from '../../content/government/plans-and-programs/index.yaml?raw';
+import publicParticipationIndex from '../../content/government/public-participation/index.yaml?raw';
 
 // Create a mapping of category slugs to their YAML content
 const categoryIndexMap: { [key: string]: string } = {
@@ -59,6 +62,9 @@ const categoryIndexMap: { [key: string]: string } = {
   'housing-land-use': housingLandUseIndex,
   departments: governmentDepartmentsIndex,
   legislative: governmentDepartmentsLegislativeIndex,
+  'about-santo-nino': aboutSantoNinoIndex,
+  'plans-and-programs': plansAndProgramsIndex,
+  'public-participation': publicParticipationIndex,
 };
 
 // Parse the YAML content

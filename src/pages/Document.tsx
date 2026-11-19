@@ -23,6 +23,7 @@ import {
   type CategoryIndex,
 } from '../data/yamlLoader';
 import SEO from '../components/SEO';
+import NotFound from './NotFound';
 
 interface DocumentProps {
   theme?: string;
@@ -80,7 +81,7 @@ export default function Document({
               href: `${sectionHref}/${category}`,
             },
             {
-              label: documentSlug,
+              label: index.title ?? documentSlug,
               href: `${sectionHref}/${category}/${documentSlug}`,
             },
           ]);
@@ -127,17 +128,7 @@ export default function Document({
   }
 
   if (error) {
-    return (
-      <Section className="p-3 mb-12">
-        <Breadcrumbs className="mb-8" items={breadcrumbs} />
-        <Banner
-          type="error"
-          title="Document Not Found"
-          description={error}
-          icon
-        />
-      </Section>
-    );
+    return <NotFound />;
   }
 
   if (nestedIndex) {

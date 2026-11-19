@@ -1,9 +1,9 @@
 {
-  "GOVERNMENT_NAME": "Lapu Lapu City",
-  "MAYOR": "Ma. Cynthia K. Chan",
-  "MAYOR_HE_SHE": "she",
+  "GOVERNMENT_NAME": "Santo Niño, Cagayan",
+  "MAYOR": "[Mayor's Name]",
+  "MAYOR_HE_SHE": "they",
   "HONORIFIC_TITLE": "Honorable",
-  "VICE_MAYOR": "Celedonio B. Sitoy",
-  "VICE_MAYOR_HE_SHE": "he",
-  "YEAR_ELECTED": "2022"
+  "VICE_MAYOR": "[Vice Mayor's Name]",
+  "VICE_MAYOR_HE_SHE": "they",
+  "YEAR_ELECTED": "2025"
 }

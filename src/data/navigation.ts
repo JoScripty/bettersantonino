@@ -1,79 +1,115 @@
 import type { NavigationItem } from '../types';
-import { serviceCategories as servicesData } from './yamlLoader';
+import { serviceCategories, governmentCategories } from './yamlLoader';
+import { site } from '../config/site';
 
-interface Subcategory {
-  name: string;
-  slug: string;
-}
+/** Translation key for a navigation label, e.g. "Latest News" → "latestnews" */
+export const navKey = (label: string) =>
+  `navbar.${label.toLowerCase().replace(/\s+/g, '')}`;
 
-interface Category {
-  category: string;
-  slug: string;
-  subcategories: Subcategory[];
-}
+export const transparencySections = [
+  {
+    slug: 'full-disclosure',
+    label: 'Full Disclosure Policy',
+    description:
+      'Budgets, financial statements and other reports posted under the DILG Full Disclosure Policy.',
+    icon: 'FileSpreadsheet',
+  },
+  {
+    slug: 'bids',
+    label: 'Bids & Procurement',
+    description:
+      'Invitations to bid, notices of award, and the annual procurement plan.',
+    icon: 'Gavel',
+  },
+  {
+    slug: 'ordinances',
+    label: 'Ordinances & Resolutions',
+    description: 'Legislation enacted by the Sangguniang Bayan of Santo Niño.',
+    icon: 'ScrollText',
+  },
+  {
+    slug: 'citizens-charter',
+    label: "Citizen's Charter",
+    description:
+      'Requirements, steps, fees and processing time for every frontline service.',
+    icon: 'ClipboardList',
+  },
+] as const;
 
 export const mainNavigation: NavigationItem[] = [
   {
     label: 'Services',
     href: '/services',
-    children: (servicesData.categories as Category[]).map(category => ({
+    children: serviceCategories.categories.map(category => ({
       label: category.category,
       href: `/services/${category.slug}`,
     })),
   },
   {
     label: 'Government',
-    href: '/government/departments',
+    href: '/government',
+    children: governmentCategories.categories.map(category => ({
+      label: category.category,
+      href: `/government/${category.slug}`,
+    })),
   },
+  {
+    label: 'Transparency',
+    href: '/transparency',
+    children: transparencySections.map(section => ({
+      label: section.label,
+      href: `/transparency/${section.slug}`,
+    })),
+  },
+  { label: 'News', href: '/news' },
+  { label: 'Hotlines', href: '/hotlines' },
 ];
+
+const socialLinks = [
+  { label: 'Facebook', href: site.social.facebook },
+  { label: 'YouTube', href: site.social.youtube },
+  { label: 'Instagram', href: site.social.instagram },
+  { label: 'Twitter', href: site.social.twitter },
+].filter(link => link.href);
 
 export const footerNavigation = {
   mainSections: [
     {
-      title: 'About',
-      links: [
-        { label: 'About the Portal', href: '/about' },
-        // { label: 'Privacy Policy', href: '/privacy' },
-        // { label: 'Terms of Use', href: '/terms' },
-        { label: 'Accessibility', href: '/accessibility' },
-        { label: 'Contact Us', href: '/about' },
-        { label: 'Community Discord', href: '/discord' },
-      ],
-    },
-    {
       title: 'Services',
       links: [
         { label: 'All Services', href: '/services' },
-        ...(servicesData.categories as Category[])
-          .slice(0, 6)
-          .map(category => ({
-            label: category.category,
-            href: `/services/${category.slug}`,
-          })),
-        { label: 'Hotlines', href: '/philippines/hotlines' },
-        { label: 'Holidays', href: '/philippines/holidays' },
+        ...serviceCategories.categories.slice(0, 5).map(category => ({
+          label: category.category,
+          href: `/services/${category.slug}`,
+        })),
       ],
     },
     {
       title: 'Government',
       links: [
-        { label: 'Open Data', href: 'https://data.gov.ph' },
-        { label: 'Freedom of Information', href: 'https://www.foi.gov.ph' },
-        {
-          label: 'Contact Center',
-          href: 'https://contactcenterngbayan.gov.ph',
-        },
+        { label: 'Executive', href: '/government/departments/executive' },
+        { label: 'Sangguniang Bayan', href: '/government/departments' },
+        { label: 'Latest News', href: '/news' },
+        { label: 'Transparency', href: '/transparency' },
+        { label: 'Emergency Hotlines', href: '/hotlines' },
+      ],
+    },
+    {
+      title: 'National Government',
+      links: [
+        { label: 'GOV.PH', href: 'https://www.gov.ph' },
         {
           label: 'Official Gazette',
           href: 'https://www.officialgazette.gov.ph',
         },
+        { label: 'Freedom of Information', href: 'https://www.foi.gov.ph' },
+        { label: 'Open Data Philippines', href: 'https://data.gov.ph' },
+        {
+          label: 'Contact Center ng Bayan',
+          href: 'https://contactcenterngbayan.gov.ph',
+        },
       ],
     },
   ],
-  socialLinks: [
-    { label: 'Facebook', href: 'https://facebook.com/govph' },
-    { label: 'Twitter', href: 'https://twitter.com/govph' },
-    { label: 'Instagram', href: 'https://instagram.com/govph' },
-    { label: 'YouTube', href: 'https://youtube.com/govph' },
-  ],
+  socialLinks,
 };

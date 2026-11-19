@@ -1,41 +1,42 @@
-# Lapu-Lapu City Government: Free Health Services
+# Get Free Check-ups, Basic Medicines, and Vaccines
 
-The Lapu-Lapu City Government offers free **check-ups, medicines, and vaccines** through the City Health Office (CHO), barangay health centers, and partner programs.
+The Rural Health Unit (RHU) of Santo Niño and the Barangay Health Stations provide free consultations, basic medicines, and vaccines to residents.
 
----
+> **TODO:** Confirm the requirements, fees, and processing time with the office, following the municipal Citizen's Charter.
 
-## 1. Free Medical Check-ups
+|                     |                                             |
+| ------------------- | ------------------------------------------- |
+| **Office**          | Municipal Health Office / Rural Health Unit |
+| **Fee**             | Free                                        |
+| **Processing time** | Same day                                    |
 
-| Service              | Where                        | Schedule                                     | Requirements                                              |
-| -------------------- | ---------------------------- | -------------------------------------------- | --------------------------------------------------------- |
-| General consultation | City/Barangay Health Centers | Mon–Fri, 8 AM–5 PM (varies by health center) | Individual Treatment Record (ITR) — issued on first visit |
+## Who can apply
 
----
+- All residents of Santo Niño
+- PhilHealth members and non-members (Konsulta package for registered members)
 
-## 2. Free Basic Medicines
+## Requirements
 
-| Service                                          | Where                                    | Schedule           | Requirements                                                                                     |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------ |
-| Free basic medicines                             | City Health Office (CHO) pharmacy        | Mon–Fri, 8 AM–5 PM | Doctor’s prescription and/or referral from hospital/clinic                                       |
-| Medicines for indigent seniors (MAIFIPP program) | Partner pharmacies (Basak, Carajay, Ibo) | Pharmacy hours     | Must be an indigent senior citizen, bona fide resident; coverage caps (e.g., ₱3,000 out-patient) |
+- Any valid ID or barangay certificate of residency
+- PhilHealth ID or Member Data Record, if available
+- Previous prescriptions or test results, if any
 
----
+## How to apply
 
-## 3. Free Vaccines & Immunization
+1. Go to the RHU or your Barangay Health Station during clinic hours.
+2. Register at the triage desk and have your vital signs taken.
+3. Wait for consultation with the doctor, nurse, or midwife.
+4. Get your prescribed medicines from the RHU pharmacy if available.
+5. Follow up on the date given by the health worker.
 
-| Beneficiary       | Vaccine/Service                                          | Where                        | Schedule                        | Requirements                                             |
-| ----------------- | -------------------------------------------------------- | ---------------------------- | ------------------------------- | -------------------------------------------------------- |
-| Children          | BCG, Pentavalent, OPV/IPV, MMR, Hepatitis B, PCV13 (EPI) | Barangay Health Centers      | Typically Wednesdays, 8 AM–4 PM | ECCD card (first-timers can get one onsite)              |
-| Pregnant women    | Tetanus Toxoid vaccine + supplements                     | Barangay Health Centers      | During prenatal services        | Proof of pregnancy, ECCD/record                          |
-| Animal bite cases | Anti-rabies vaccine (first dose free)                    | Animal Bite Treatment Center | Clinic hours                    | Proof of Lapu-Lapu residency (e.g., voter’s certificate) |
+## Services available
 
----
+- General consultation and blood pressure monitoring
+- Basic medicines (subject to availability)
+- Adult vaccines (flu, pneumonia for seniors) and child immunization
+- TB screening and DOTS treatment
+- Animal bite treatment (TODO: confirm if available at the RHU)
 
-## How to Avail
+## Need help?
 
-1. **Check-ups** → Go to your Barangay Health Center or City Health Office; first-timers will be issued an ITR.
-2. **Medicines** → Bring a doctor’s prescription/referral; submit at CHO pharmacy window.
-3. **Child immunization** → Visit your barangay health center on immunization day with ECCD card.
-4. **Pregnancy services** → Attend prenatal visits at the barangay health center for free vaccine and supplements.
-5. **Anti-rabies** → Report to the Animal Bite Treatment Center; bring proof of residency.
-6. **Senior citizen medicines** → Visit participating partner pharmacies; follow MAIFIPP guidelines.
+Visit the office at the Municipal Hall, Poblacion, Santo Niño, Monday to Friday, 8:00 AM – 5:00 PM, or see [Municipal Offices](/government/departments/municipal-offices) for contact numbers.

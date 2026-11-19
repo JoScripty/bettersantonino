@@ -1,3 +1,4 @@
+import { site } from '../config/site';
 import Section from '../components/ui/Section';
 import { useParams, Link } from 'react-router';
 import { Heading } from '../components/ui/Heading';
@@ -48,13 +49,13 @@ const Government: React.FC = () => {
     return (
       <>
         <SEO
-          title="Services"
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
-          keywords="government services, public services, local government, civic services"
+          title="Government"
+          description={`Officials, offices, plans, and public consultations of the ${site.name}.`}
+          keywords="Santo Niño officials, mayor, Sangguniang Bayan, municipal offices"
         />
         <GovernmentActivitySection
-          title={`All local government services`}
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
+          title="Your Government"
+          description={`Officials, offices, plans, and public consultations of the ${site.name}.`}
         />
       </>
     );
@@ -88,7 +89,7 @@ const Government: React.FC = () => {
 
         {loading ? (
           <div className="flex justify-center items-center p-8">
-            <Text>Loading services...</Text>
+            <Text>Loading...</Text>
           </div>
         ) : (
           <>

@@ -1,0 +1,8 @@
+layout: list
+pages:
+  - name: 'Public Consultations'
+    slug: 'public-consultations'
+    description: 'Upcoming hearings and consultations on proposed ordinances, budgets, and projects.'
+  - name: 'Feedback and Complaints'
+    slug: 'feedback-and-complaints'
+    description: 'How to send feedback, file a complaint, or request information from the municipality.'

@@ -1,10 +1,12 @@
-# Department Pages
-# This file contains all the pages/governments available under the Department
-
+# Officials & Offices
+layout: grid
 pages:
-  - name: 'Executive'
+  - name: 'Office of the Mayor'
     slug: 'executive'
-    description: "Find out about your Mayor and Vice Mayor, including upcoming events, the Mayor's Community Assistance Program, mayoral history, and information about other historic roles in the local government unit."
-  - name: 'Legislative'
+    description: 'The Mayor and Vice Mayor of Santo Niño, the executive programs, and how to reach the Office of the Mayor.'
+  - name: 'Sangguniang Bayan'
     slug: 'legislative'
-    description: 'As of the 2025–2028 term, the Sangguniang Panlungsod (City Council) of Lapu-Lapu City has 12 elected councilors, with the Vice Mayor as the presiding officer of the council.'
+    description: 'The municipal council, presided over by the Vice Mayor, that enacts ordinances and resolutions.'
+  - name: 'Municipal Offices'
+    slug: 'municipal-offices'
+    description: 'Directory of municipal departments, what they do, and how to contact them.'

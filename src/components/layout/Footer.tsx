@@ -4,79 +4,109 @@ import {
   Twitter,
   Instagram,
   Youtube,
-  CheckCircle2,
+  Landmark,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
 } from 'lucide-react';
-import { footerNavigation } from '../../data/navigation';
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import { footerNavigation } from '../../data/navigation';
+import { site } from '../../config/site';
+
+const socialIcons: Record<string, React.ReactNode> = {
+  Facebook: <Facebook className="h-5 w-5" />,
+  Twitter: <Twitter className="h-5 w-5" />,
+  Instagram: <Instagram className="h-5 w-5" />,
+  YouTube: <Youtube className="h-5 w-5" />,
+};
+
+const isExternal = (href: string) => /^https?:\/\//.test(href);
 
 const Footer: React.FC = () => {
   const { t } = useTranslation('common');
-
-  const getSocialIcon = (label: string) => {
-    switch (label) {
-      case 'Facebook':
-        return <Facebook className="h-5 w-5" />;
-      case 'Twitter':
-        return <Twitter className="h-5 w-5" />;
-      case 'Instagram':
-        return <Instagram className="h-5 w-5" />;
-      case 'YouTube':
-        return <Youtube className="h-5 w-5" />;
-      default:
-        return null;
-    }
-  };
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white mt-auto">
       <div className="container mx-auto px-4 pt-12 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center mb-4">
-              <CheckCircle2 className="h-12 w-12 mr-3" />
-              {/* <img
-                src="/ph-logo.webp"
-                alt="Philippines Coat of Arms"
-                className="h-12 w-12 mr-3"
-              /> */}
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-600">
+                <Landmark className="h-6 w-6" aria-hidden="true" />
+              </span>
               <div>
-                <div className="font-bold">{t('site_name')}</div>
-                <div className="text-xs text-gray-400">BetterGov.ph Portal</div>
+                <div className="font-bold">{site.name}</div>
+                <div className="text-xs text-gray-400">
+                  Province of {site.province} · {site.region}
+                </div>
               </div>
             </div>
-            <p className="text-gray-400 text-sm mb-4">
-              A community portal providing Philippine citizens, businesses, and
-              visitors with information and services.
-            </p>
-            <div className="flex space-x-4">
-              {footerNavigation.socialLinks.map(link => (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {getSocialIcon(link.label)}
-                </Link>
-              ))}
-            </div>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li className="flex gap-2">
+                <MapPin className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
+                {site.address}
+              </li>
+              <li className="flex gap-2">
+                <Phone className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
+                <a href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}>
+                  {site.phone}
+                </a>
+              </li>
+              <li className="flex gap-2">
+                <Mail className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
+                <a href={`mailto:${site.email}`} className="break-all">
+                  {site.email}
+                </a>
+              </li>
+              <li className="flex gap-2">
+                <Clock className="h-4 w-4 mt-0.5 shrink-0" aria-hidden />
+                {site.officeHours}
+              </li>
+            </ul>
+            {footerNavigation.socialLinks.length > 0 && (
+              <div className="flex gap-4 mt-4">
+                {footerNavigation.socialLinks.map(link => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    aria-label={link.label}
+                    className="text-gray-400 hover:text-white transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {socialIcons[link.label]}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           {footerNavigation.mainSections.map(section => (
             <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <h2 className="text-base font-semibold mb-4">{section.title}</h2>
               <ul className="space-y-2">
                 {section.links.map(link => (
                   <li key={link.label}>
-                    <Link
-                      to={link.href}
-                      className="text-gray-400 hover:text-white text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
+                    {isExternal(link.href) ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white text-sm transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={link.href}
+                        className="text-gray-400 hover:text-white text-sm transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -84,44 +114,15 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              {t('footer.copyright')}
-            </p>
-            <div className="flex space-x-6">
-              {/* <a
-                href="/privacy"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/terms"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Terms of Use
-              </a> */}
-              <Link
-                to="https://github.com/bettergovph/bettergov"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Contribute at GitHub
-              </Link>
-              <Link
-                to="/sitemap"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Sitemap
-              </Link>
-              <a
-                href="/accessibility"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Accessibility
-              </a>
-            </div>
-          </div>
+        <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between gap-2 text-sm text-gray-400">
+          <p>
+            © {year} {site.name}, {site.province}.{' '}
+            {t(
+              'footer.rights',
+              'All content is in the public domain unless otherwise stated.'
+            )}
+          </p>
+          <p>{site.tagline}</p>
         </div>
       </div>
     </footer>

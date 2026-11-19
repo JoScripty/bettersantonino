@@ -1,9 +1,30 @@
-# legislative Department Pages
-# This file contains all the pages/governments/departments/legislative available under the Department
-#
+# Sangguniang Bayan of Santo Niño
+# TODO: replace each placeholder with the actual member, committee chairmanships, and photo.
 layout: grid
-title: 'Legislative Department'
-description: 'Page Description'
+title: 'Sangguniang Bayan'
+description: 'The legislative body of the municipality, presided over by the Vice Mayor. See enacted measures in Transparency → Ordinances & Resolutions.'
 pages:
-  - name: 'Councilor A'
-    description: 'Description'
+  - name: "[Vice Mayor's Name]"
+    description: 'Vice Mayor and Presiding Officer'
+  - name: 'SB Member 1'
+    description: 'Committee chairmanships: TODO'
+  - name: 'SB Member 2'
+    description: 'Committee chairmanships: TODO'
+  - name: 'SB Member 3'
+    description: 'Committee chairmanships: TODO'
+  - name: 'SB Member 4'
+    description: 'Committee chairmanships: TODO'
+  - name: 'SB Member 5'
+    description: 'Committee chairmanships: TODO'
+  - name: 'SB Member 6'
+    description: 'Committee chairmanships: TODO'
+  - name: 'SB Member 7'
+    description: 'Committee chairmanships: TODO'
+  - name: 'SB Member 8'
+    description: 'Committee chairmanships: TODO'
+  - name: 'ABC President'
+    description: 'Ex-officio member, Liga ng mga Barangay'
+  - name: 'SK Federation President'
+    description: 'Ex-officio member, Sangguniang Kabataan'
+  - name: 'IPMR'
+    description: 'Indigenous Peoples Mandatory Representative (if applicable)'

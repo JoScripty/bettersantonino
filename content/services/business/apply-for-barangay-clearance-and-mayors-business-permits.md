@@ -1,65 +1,38 @@
-# How to Set Up a Business Partnership
+# Apply for a Barangay Clearance and Mayor's Business Permit
 
-## Step 1: Register with SEC
+Every business operating in Santo Niño needs a barangay business clearance and a Mayor's (business) permit from the Business Permits and Licensing Office (BPLO).
 
-**Prepare documents:**
+> **TODO:** Confirm the requirements, fees, and processing time with the office, following the municipal Citizen's Charter.
 
-- Partnership name (check via [SEC eSPARC](https://espac.sec.gov.ph/))
-- Notarized Articles of Partnership
-- IDs/TINs of partners, office address, capital structure
+|                     |                                                                                 |
+| ------------------- | ------------------------------------------------------------------------------- |
+| **Office**          | Business Permits and Licensing Office (BPLO)                                    |
+| **Fee**             | Depends on the type and capital of the business, per the municipal Revenue Code |
+| **Processing time** | Within 3 working days for complete applications (RA 11032)                      |
 
-**File online** through [SEC eSPARC](https://espac.sec.gov.ph/) and pay fees.
+## Who can apply
 
-**Output:** SEC Certificate of Recording + Approved Business Name
+- New businesses: sole proprietors, partnerships, corporations, and cooperatives
 
-## Step 2: Apply for Business Permit
+## Requirements
 
-Go to **Lapu-Lapu City BPLO** (Business Permit and Licensing Office).
+- DTI business name registration (sole proprietor), SEC registration (partnership/corporation), or CDA registration (cooperative)
+- Barangay business clearance
+- Contract of lease or proof of ownership of the business location
+- Community Tax Certificate (cedula)
+- Locational / zoning clearance from the MPDO
+- Sanitary permit from the RHU and health certificates of employees
+- Fire Safety Inspection Certificate from the BFP
 
-**Requirements:**
+## How to apply
 
-- Unified Application Form
-- SEC Certificate of Registration + Articles of Partnership
-- Occupancy Permit (if owner) OR Lease Contract (if renting)
-- Community Tax Certificate (CTC)
+1. Register your business name with DTI, SEC, or CDA.
+2. Get a barangay business clearance from the barangay where the business is located.
+3. Fill out the Unified Business Permit Application Form at the BPLO.
+4. Have your application assessed and pay the fees at the Municipal Treasurer's Office.
+5. Complete inspections (zoning, sanitary, fire, building).
+6. Claim your Mayor's permit and business plate.
 
-Apply in person or online via [Lapu-Lapu Online Business Permit Portal](https://businesspermit.lapulapucity.gov.ph/).
+## Need help?
 
-> Note: Inspections may include zoning, sanitary, and fire safety checks.
-
-## Step 3: Register with BIR
-
-File at the **BIR Revenue District Office (RDO)** where your office is located.
-
-- Fill out [BIR Form 1903](https://www.bir.gov.ph/images/1903%20Jan%202024.pdf)
-- Submit SEC Certificate + Articles of Partnership + valid IDs
-- Pay registration fee + Documentary Stamp Tax (DST)
-
-**Within 30 days of receiving BIR Certificate:**
-
-- Apply for Authority to Print Receipts (Form 1906) OR enroll in e-invoicing
-- Register your Books of Accounts
-
-## Step 4: Register as Employer (if hiring)
-
-Enroll with:
-
-- [SSS](https://www.sss.gov.ph/)
-- [PhilHealth](https://www.philhealth.gov.ph/)
-- [Pag-IBIG](https://www.pagibigfund.gov.ph/)
-
-## Process Flow
-
-1. SEC name check + register via [SEC eSPARC](https://espac.sec.gov.ph/)
-2. Secure Barangay Certification + site/lease documents
-3. Apply for Business Permit at [Lapu-Lapu BPLO](https://businesspermit.lapulapucity.gov.ph/)
-4. File BIR Form 1903 → apply ATP → register books
-
-## Document Checklist
-
-- [ ] SEC Articles of Partnership + SEC Certificate
-- [ ] Lease Contract OR Occupancy/Building docs
-- [ ] Lapu-Lapu BPLO Unified Application Form + CTC
-- [ ] BIR Form 1903, IDs, ATP/Books
-
-With these steps, your partnership in Lapu-Lapu City will be fully compliant and ready to operate!
+Visit the office at the Municipal Hall, Poblacion, Santo Niño, Monday to Friday, 8:00 AM – 5:00 PM, or see [Municipal Offices](/government/departments/municipal-offices) for contact numbers.

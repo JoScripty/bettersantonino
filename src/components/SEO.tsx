@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { fullName } from '../config/site';
 
 interface SEOProps {
   title?: string;
@@ -17,7 +18,7 @@ export default function SEO({
   image,
   url,
   type = 'website',
-  siteName = import.meta.env.VITE_GOVERNMENT_NAME || 'Local Government Website',
+  siteName = fullName,
 }: SEOProps) {
   const defaultTitle = `${siteName} - Official Government Website`;
   const defaultDescription =
@@ -68,7 +69,7 @@ export default function SEO({
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#0066eb" />
+      <meta name="theme-color" content="#0052bc" />
 
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />

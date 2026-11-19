@@ -22,3 +22,10 @@ export const LANGUAGES: Record<LanguageType, LanguageInfo> = {
 };
 
 export const DEFAULT_LANGUAGE: LanguageType = 'en';
+
+/**
+ * Languages that actually have a translation file in public/locales/.
+ * Add a code here after creating public/locales/{code}/common.json.
+ * The language picker is hidden while only one language is available.
+ */
+export const AVAILABLE_LANGUAGES: LanguageType[] = ['en'];

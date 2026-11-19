@@ -1,0 +1,11 @@
+layout: list
+pages:
+  - name: 'Executive-Legislative Agenda (ELA)'
+    slug: 'executive-legislative-agenda'
+    description: 'The priorities agreed by the Mayor and the Sangguniang Bayan for the current term.'
+  - name: 'Comprehensive Development Plan (CDP)'
+    slug: 'comprehensive-development-plan'
+    description: 'The multi-year plan for social, economic, environmental, infrastructure, and institutional development.'
+  - name: 'Flagship Programs'
+    slug: 'flagship-programs'
+    description: 'Key programs of the current administration and their status.'

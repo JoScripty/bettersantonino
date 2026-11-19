@@ -8,9 +8,9 @@ Find out about your Mayor and Vice Mayor, including upcoming events, the Mayor's
 
 The **Mayor** is the chief executive official of the **Local Government Unit of {GOVERNMENT_NAME}**. The Mayor is elected by residents during the **Philippine National and Local Elections**, which are held every three years.
 
-The Mayor serves as the head of the local government and is responsible for implementing programs, policies, and development initiatives approved by the **Sangguniang Panlungsod / Sangguniang Bayan (City or Municipal Council)**.
+The Mayor serves as the head of the local government and is responsible for implementing programs, policies, and development initiatives approved by the **Sangguniang Bayan (Municipal Council)**.
 
-The Mayor’s duties include representing the LGU during official functions, leading local development programs, overseeing city or municipal services, and ensuring that public services are effectively delivered to residents.
+The Mayor’s duties include representing the LGU during official functions, leading local development programs, overseeing municipal services, and ensuring that public services are effectively delivered to residents.
 
 The **current Mayor is {MAYOR}.**
 
@@ -63,7 +63,7 @@ You can read more about these initiatives on the **Mayor's Community Programs pa
 
 **{VICE_MAYOR}** currently serves as the **Vice Mayor of {GOVERNMENT_NAME}**.
 
-The Vice Mayor presides over the **Sangguniang Panlungsod / Sangguniang Bayan**, ensuring legislative sessions run properly and that ordinances and resolutions support the development goals of the local government.
+The Vice Mayor presides over the **Sangguniang Bayan**, ensuring legislative sessions run properly and that ordinances and resolutions support the development goals of the local government.
 
 Vice Mayor **{VICE_MAYOR}** was elected during the **{YEAR_ELECTED} National and Local Elections**.
 
@@ -77,11 +77,11 @@ Vice Mayor **{VICE_MAYOR}** supports initiatives focused on:
 
 # About the Office of the Vice Mayor
 
-The **Vice Mayor** performs legislative functions and presides over meetings of the **City or Municipal Council**.
+The **Vice Mayor** performs legislative functions and presides over meetings of the **Municipal Council**.
 
 When the Mayor is unable to perform official duties due to travel, illness, or other official commitments, the **Vice Mayor assumes responsibilities as Acting Mayor**, in accordance with Philippine local government laws.
 
-The Vice Mayor may also represent the city or municipality in official functions, civic ceremonies, and community events when designated by the Mayor.
+The Vice Mayor may also represent the municipality in official functions, civic ceremonies, and community events when designated by the Mayor.
 
 ---
 
@@ -130,7 +130,7 @@ Key responsibilities include:
 - managing emergency and disaster response
 - representing the LGU in regional and national engagements
 
-A historical list of previous mayors and key milestones of the city or municipality can be found on the **Mayoral History page**.
+A historical list of previous mayors and key milestones of the municipality can be found on the **Mayoral History page**.
 
 ---
 
@@ -149,11 +149,11 @@ These roles reflect the legacy of leadership and public service within the commu
 # Contact the Mayor's Office
 
 **Office of the Mayor**
-City/Municipal Hall of **{GOVERNMENT_NAME}**
+Municipal Hall of **{GOVERNMENT_NAME}**
 
 **Address:**
-[STREET ADDRESS]
-[CITY / PROVINCE / POSTAL CODE]
+Poblacion, Santo Niño
+Cagayan, Philippines
 
 **Telephone:**
 [PHONE NUMBER]

@@ -1,53 +1,60 @@
 {
-  "site_name": "Lapu Lapu City Portal",
-  "site_description": "A community-run portal for the Lapu Lapu City",
+  "site_name": "Municipality of Santo Niño",
+  "site_description": "Official website of the Municipality of Santo Niño, Cagayan",
+  "topbar": {
+    "republic": "Republic of the Philippines",
+    "emergency": "Emergency: 911"
+  },
   "hero": {
-    "title": "Welcome to BetterGov.ph",
-    "subtitle": "A community-run portal to find information of the Lapu Lapu City Government",
-    "nationalId": "National ID",
-    "birthCertificate": "Birth Certificate",
-    "businessRegistration": "Business Registration"
+    "welcome": "Welcome to",
+    "subtitle": "Find services, follow the latest updates, and see how your local government works for you.",
+    "searchPlaceholder": "What do you need? e.g. business permit, birth certificate",
+    "searchButton": "Search",
+    "popular": "Popular:"
   },
   "services": {
     "title": "Services & Information",
     "governmentServices": "Government Services",
-    "description": "Access official government services quickly and easily. Find what you need for citizenship, business, education, and more.",
-    "viewAll": "View All Services",
+    "description": "Find the requirements, steps, and offices for the services of the municipal government.",
+    "viewAll": "View all services",
     "viewAllCategory": "View All"
   },
   "governmentActivity": {
-    "title": "Government Activity",
-    "description": "Stay updated with the latest government activities and announcements."
-  },
-  "weather": {
-    "title": "Weather Updates"
-  },
-  "forex": {
-    "title": "Foreign Exchange Rates"
+    "title": "Your Government",
+    "description": "Get to know your officials, municipal offices, plans, and how to take part."
   },
   "news": {
-    "title": "Latest News & Updates"
+    "title": "Latest News & Updates",
+    "description": "Announcements, advisories, and stories from the municipal government.",
+    "viewAll": "View all news",
+    "readMore": "Read more",
+    "all": "All",
+    "empty": "No posts found."
+  },
+  "transparency": {
+    "title": "Transparency",
+    "description": "Public funds, public records. See how the municipality plans, spends, and legislates.",
+    "viewAll": "Open the transparency portal"
+  },
+  "hotlines": {
+    "title": "Emergency Hotlines",
+    "description": "Save these numbers. Tap a number to call.",
+    "viewAll": "All hotlines"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or may have been moved."
   },
   "footer": {
-    "copyright": "© 2025 BetterGov. All content is public domain unless otherwise specified."
+    "rights": "All content is in the public domain unless otherwise stated."
   },
   "navbar": {
-    "government": "Government",
+    "home": "Home",
     "services": "Services",
+    "government": "Government",
+    "transparency": "Transparency",
+    "news": "News",
     "hotlines": "Hotlines",
-    "holidays": "Holidays"
-  },
-  "joinUs": {
-    "stripTitle": "🚀 Join the #CivicTech Revolution",
-    "stripSubtitle": "Help build the future of the Philippines and governance through technology",
-    "joinNow": "Join Now",
-    "discord": "Discord",
-    "bannerTitle": "Join the #CivicTech Revolution",
-    "bannerSubtitle": "Help build the future of the Philippines and governance through technology.",
-    "bannerHighlight": "Volunteer-led. Open source. Community-driven.",
-    "joinMovement": "Join Our Movement",
-    "or": "or",
-    "joinDiscord": "Join Discord",
-    "features": "🚀 Infrastructure • 💡 Mentorship • 🤝 Community • 🏢 Office Space"
+    "search": "Search"
   }
 }
