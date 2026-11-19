@@ -1,0 +1,77 @@
+# Full Disclosure Policy (FDP) documents
+# Post each report here as soon as it is uploaded to the DILG FDP Portal.
+# Put the PDF in public/documents/transparency/ and set `file` to its path.
+# TODO: every entry below points to a sample PDF. Replace with the real files.
+#
+# Fields: title, category, year, period (Annual | Q1 | Q2 | Q3 | Q4), file
+documents:
+  - title: 'Annual Budget'
+    category: 'Budget'
+    year: 2026
+    period: 'Annual'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Annual Investment Program (AIP)'
+    category: 'Budget'
+    year: 2026
+    period: 'Annual'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Statement of Receipts and Expenditures'
+    category: 'Financial Report'
+    year: 2026
+    period: 'Q3'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Quarterly Statement of Cash Flow'
+    category: 'Financial Report'
+    year: 2026
+    period: 'Q3'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Statement of Debt Service'
+    category: 'Financial Report'
+    year: 2026
+    period: 'Annual'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Report of SEF Utilization'
+    category: 'Fund Utilization'
+    year: 2026
+    period: 'Q3'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Report on 20% Component of the NTA Utilization'
+    category: 'Fund Utilization'
+    year: 2026
+    period: 'Q3'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Local Disaster Risk Reduction and Management Fund Utilization'
+    category: 'Fund Utilization'
+    year: 2026
+    period: 'Q3'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Gender and Development (GAD) Accomplishment Report'
+    category: 'Fund Utilization'
+    year: 2025
+    period: 'Annual'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Trust Fund (PDAF) Utilization'
+    category: 'Fund Utilization'
+    year: 2026
+    period: 'Q3'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Annual Procurement Plan'
+    category: 'Procurement'
+    year: 2026
+    period: 'Annual'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Bid Results on Civil Works, Goods and Services, and Consulting Services'
+    category: 'Procurement'
+    year: 2026
+    period: 'Q3'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Annual Budget'
+    category: 'Budget'
+    year: 2025
+    period: 'Annual'
+    file: '/documents/transparency/sample.pdf'
+  - title: 'Statement of Receipts and Expenditures'
+    category: 'Financial Report'
+    year: 2025
+    period: 'Q4'
+    file: '/documents/transparency/sample.pdf'

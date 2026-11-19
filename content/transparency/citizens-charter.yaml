@@ -1,0 +1,81 @@
+# Citizen's Charter (RA 11032, Ease of Doing Business Act)
+# Copy each service from the approved Citizen's Charter of the municipality.
+# TODO: sample entries. Confirm with each office and add every frontline service.
+#
+# classification: Simple (3 working days) | Complex (7 working days) | Highly Technical (20 working days)
+charterFile: '/documents/transparency/sample.pdf'
+offices:
+  - office: 'Municipal Civil Registrar'
+    services:
+      - name: 'Issuance of certified true copy of birth, marriage, or death certificate'
+        classification: 'Simple'
+        who: 'Document owner or authorized representative'
+        requirements:
+          - 'Request form'
+          - 'Valid ID of the requester'
+          - 'Authorization letter and ID of the owner (for representatives)'
+        steps:
+          - 'Fill out the request form at the MCR.'
+          - "Pay the fee at the Municipal Treasurer's Office."
+          - 'Claim the certified copy at the MCR.'
+        fee: 'PHP [amount]'
+        time: '[minutes]'
+      - name: 'Registration of birth (timely)'
+        classification: 'Simple'
+        who: 'Parents of a child born in Santo Niño, within 30 days of birth'
+        requirements:
+          - 'Certificate of Live Birth (Municipal Form 102) signed by the attendant'
+          - 'Affidavit of Acknowledgment of Paternity (if parents are not married)'
+        steps:
+          - 'Submit the Certificate of Live Birth to the MCR.'
+          - 'Have it reviewed and recorded.'
+          - 'Claim the registered copy.'
+        fee: 'Free'
+        time: '[minutes]'
+  - office: 'Business Permits and Licensing Office'
+    services:
+      - name: "New business permit (Mayor's permit)"
+        classification: 'Complex'
+        who: 'New businesses'
+        requirements:
+          - 'DTI, SEC, or CDA registration'
+          - 'Barangay business clearance'
+          - 'Contract of lease or proof of ownership'
+          - 'Community Tax Certificate'
+        steps:
+          - 'Submit the Unified Business Permit Application Form.'
+          - 'Have the application assessed.'
+          - "Pay at the Municipal Treasurer's Office."
+          - 'Undergo inspection.'
+          - 'Claim the permit.'
+        fee: 'Per the municipal Revenue Code'
+        time: 'Up to 3 working days'
+  - office: 'Municipal Social Welfare and Development Office'
+    services:
+      - name: 'Assistance to Individuals in Crisis Situation (AICS)'
+        classification: 'Simple'
+        who: 'Residents in crisis (medical, burial, transportation)'
+        requirements:
+          - 'Valid ID'
+          - 'Certificate of indigency'
+          - 'Medical certificate, prescription, bill, or death certificate'
+        steps:
+          - 'Go to the MSWDO and register.'
+          - 'Undergo interview and assessment by a social worker.'
+          - 'Receive assistance or referral.'
+        fee: 'Free'
+        time: '[minutes]'
+  - office: "Municipal Treasurer's Office"
+    services:
+      - name: 'Issuance of Community Tax Certificate (cedula)'
+        classification: 'Simple'
+        who: 'Residents 18 years old and above, and businesses'
+        requirements:
+          - 'Valid ID'
+          - 'Declaration of gross income or earnings (if applicable)'
+        steps:
+          - 'Fill out the CTC form.'
+          - 'Pay the computed tax.'
+          - 'Receive the CTC.'
+        fee: 'PHP 5.00 basic plus PHP 1.00 per PHP 1,000 income (Local Government Code)'
+        time: '[minutes]'

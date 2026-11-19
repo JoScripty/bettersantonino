@@ -1,0 +1,41 @@
+# Bids and procurement opportunities
+# Post every invitation here and on PhilGEPS (https://www.philgeps.gov.ph).
+# TODO: sample entries. Replace with actual procurement notices.
+#
+# Fields: reference, title, type (Civil Works | Goods | Services | Consulting),
+#         abc (Approved Budget for the Contract, in PHP), status (Open | Closed | Awarded),
+#         posted (YYYY-MM-DD), deadline (YYYY-MM-DD), awardee (when awarded), file
+bids:
+  - reference: 'ITB-2026-015'
+    title: 'Concreting of Farm-to-Market Road, Barangay [Name]'
+    type: 'Civil Works'
+    abc: 4850000
+    status: 'Open'
+    posted: '2026-11-12'
+    deadline: '2026-12-02'
+    file: '/documents/transparency/sample.pdf'
+  - reference: 'ITB-2026-014'
+    title: 'Supply and Delivery of Medicines for the Rural Health Unit'
+    type: 'Goods'
+    abc: 1200000
+    status: 'Open'
+    posted: '2026-11-05'
+    deadline: '2026-11-26'
+    file: '/documents/transparency/sample.pdf'
+  - reference: 'ITB-2026-012'
+    title: 'Rehabilitation of Barangay Health Station, Barangay [Name]'
+    type: 'Civil Works'
+    abc: 950000
+    status: 'Closed'
+    posted: '2026-10-01'
+    deadline: '2026-10-21'
+    file: '/documents/transparency/sample.pdf'
+  - reference: 'ITB-2026-009'
+    title: 'Supply and Delivery of Certified Rice Seeds'
+    type: 'Goods'
+    abc: 780000
+    status: 'Awarded'
+    posted: '2026-08-14'
+    deadline: '2026-09-03'
+    awardee: '[Supplier name]'
+    file: '/documents/transparency/sample.pdf'

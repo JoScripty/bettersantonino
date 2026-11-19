@@ -11,6 +11,7 @@ import Search from './pages/Search';
 import NotFound from './pages/NotFound';
 import News from './pages/News';
 import NewsArticle from './pages/NewsArticle';
+import Transparency from './pages/Transparency';
 import { isMeilisearchEnabled } from './lib/meilisearch';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
@@ -41,6 +42,8 @@ function App() {
               )}
               <Route path="/news" element={<News />} />
               <Route path="/news/:slug" element={<NewsArticle />} />
+              <Route path="/transparency" element={<Transparency />} />
+              <Route path="/transparency/:section" element={<Transparency />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
